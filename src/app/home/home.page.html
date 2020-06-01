@@ -1,20 +1,96 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>
-      Blank
-    </ion-title>
-  </ion-toolbar>
-</ion-header>
+<ion-app>
+  <ion-menu side="start" content-id="main-content">
+    <ion-header>
+      <ion-toolbar translucent>
+        <ion-img src="assets/icon/servipagLogos.png" id="img-logo" class="ion-align-self-center"></ion-img>
+      </ion-toolbar>
+    </ion-header>
+    <ion-content>
+      <ion-list>
+        <ion-item>
+          <ion-icon name="mail" slot="start"></ion-icon>
+          <ion-label>Inicio</ion-label>
+        </ion-item>
+        <ion-item>
+          <ion-icon name="paper-plane" slot="start"></ion-icon>
+          <ion-label>Autopistas</ion-label>
+        </ion-item>
+        <ion-item>
+          <ion-icon name="heart" slot="start"></ion-icon>
+          <ion-label>Recargas</ion-label>
+        </ion-item>
+        <ion-item>
+          <ion-icon name="archive" slot="start"></ion-icon>
+          <ion-label>¿Como funciona?</ion-label>
+        </ion-item>
+      </ion-list>
+    </ion-content>
+  </ion-menu>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
-    </ion-toolbar>
-  </ion-header>
+  <div class="ion-page" id="main-content">
 
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
+    <ion-row>
+
+      <ion-header class="ion-no-border">
+        <ion-toolbar>
+          <ion-buttons slot="start">
+            <ion-menu-button></ion-menu-button>
+          </ion-buttons>
+          <ion-img src="assets/icon/servipagLogos.png" id="img-main-logo"></ion-img>
+        </ion-toolbar>
+      </ion-header>
+
+
+
+
+      <ion-col size="10" offset="1">
+
+        <div class="label-titulo1">
+          <ion-label>
+            Tus cuentas de siempre, como nunca antes.
+          </ion-label>
+        </div>
+
+        <div class="label-titulo2">
+          <ion-label>
+            Utiliza tus datos ingresados en Servipag.com
+          </ion-label>
+        </div>
+
+        <div class="ion-align-self-center">
+      
+            <ion-input required type="text" class="input-formulario" [(ngModel)]="user" placeholder="Ingrese su rut">
+            </ion-input>
+        </div>
+        <div style="margin-bottom:1rem">
+          
+            <ion-input required type="password" class="input-formulario" [(ngModel)]="password"
+              placeholder="Contraseña"></ion-input>
+        </div>
+        <div style="margin-left: 1.1rem;">
+          <ion-checkbox></ion-checkbox>
+          <ion-label style="margin-left: 1rem;font-size:small; vertical-align: 50%;">Recordar contraseña</ion-label>
+        </div>
+
+        <div>
+          <ion-label class="labelRecuperarRight label-link">Recuperar contraseña</ion-label>
+        </div>
+
+        <div>
+          <ion-button expand="block" (click)="signIn()">Ingresar</ion-button>
+        </div>
+
+
+        <div>
+          <ion-label class="labelRecuperarRight2 label-link">Registrate aqui</ion-label>
+        </div>
+
+        <div>
+          <ion-button expand="block" fill="outline" color="blue" (click)="signIn()">Pago rapido 1-2-3</ion-button>
+        </div>
+
+      </ion-col>
+    </ion-row>
+
   </div>
-</ion-content>
+</ion-app>
