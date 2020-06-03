@@ -1,6 +1,11 @@
+
 import { Component } from '@angular/core';
 import { MenuController } from '@ionic/angular';
 import { Router } from '@angular/router';
+
+import { AppMovilServipagService } from '../../@core/services/app-movil-servipag.service';
+import { inscribirCuentas } from '../../@core/mocks/inscribir-cuentas.mocks';
+import { ParseSpan } from '@angular/compiler';
 
 @Component({
   selector: 'app-home',
@@ -12,7 +17,9 @@ export class HomePage {
   user: string;
   password: string;
 
-  constructor(private menu: MenuController, private router: Router) { }
+  result: any;
+
+  constructor(private menu: MenuController, private router: Router, private api: AppMovilServipagService) { }
 
   openFirst() {
     this.menu.enable(true, 'first');
@@ -37,6 +44,17 @@ export class HomePage {
 
     } else {
       this.router.navigate(['/main-page']);
+
+      // TODO: el error no es por el servicio, se debe a la data que se le pasa. Evaluar.
+      this.api.getModificaCuentasInscritas(inscribirCuentas).subscribe(data => {
+        this.result = data;
+      });
+
+      // Code for test :D
+      // this.api.getUserTest().subscribe(data => {
+      //   this.result = data;
+      //   console.log(this.result);
+      // });
     }
   }
 
