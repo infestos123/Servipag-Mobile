@@ -1,11 +1,9 @@
-
 import { Component } from '@angular/core';
 import { MenuController } from '@ionic/angular';
 import { Router } from '@angular/router';
 
 import { AppMovilServipagService } from '../../@core/services/app-movil-servipag.service';
 import { inscribirCuentas } from '../../@core/mocks/inscribir-cuentas.mocks';
-import { ParseSpan } from '@angular/compiler';
 
 @Component({
   selector: 'app-home',
@@ -19,7 +17,11 @@ export class HomePage {
 
   result: any;
 
-  constructor(private menu: MenuController, private router: Router, private api: AppMovilServipagService) { }
+  constructor(
+    private menu: MenuController,
+    private router: Router,
+    private api: AppMovilServipagService
+  ) { }
 
   openFirst() {
     this.menu.enable(true, 'first');
