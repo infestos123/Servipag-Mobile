@@ -35,3 +35,15 @@ export interface IRequest {
         version_app: string
     };
 }
+
+export interface IServicesRequest {
+    body: {
+        solicita_token: string
+    };
+    header: {
+        dispositivo: string,
+        fecha: string,
+        nombre_app: string,
+        version_app: string
+    };
+}
