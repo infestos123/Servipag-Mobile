@@ -1,8 +1,8 @@
 import { Injectable } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Observable } from 'rxjs';
 
-import { IRequest } from '../models/request.models';
+import { IRequest, IServicesRequest } from '../models/request.models';
 
 @Injectable({
   providedIn: 'root'
@@ -11,6 +11,11 @@ export class AppMovilServipagService {
 
   baseUrl = 'https://ww5.servipag.com/ApiGateway/Service.svc/help/operations/AppMovilServipag';
   // testUrl = 'https://reqres.in/api/users?page=2';
+  httpOptions = {
+    headers: new HttpHeaders({
+      'Content-Type': 'application/json'
+    })
+  };
 
   constructor(private http: HttpClient) { }
 
@@ -32,8 +37,8 @@ export class AppMovilServipagService {
   getEmpresas(body: IRequest): Observable<any> {
     return this.http.post(this.baseUrl, body);
   }
-  getServicios(body: IRequest): Observable<any> {
-    return this.http.post(this.baseUrl, body);
+  getServicios(body: IServicesRequest): Observable<any> {
+    return this.http.post(this.baseUrl, JSON.stringify(body), this.httpOptions);
   }
   getModificaCuentasInscritas(body: IRequest): Observable<any> {
     return this.http.post(this.baseUrl, body);

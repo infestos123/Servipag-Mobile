@@ -10,11 +10,12 @@ import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 
 import { ServiceModule } from '../@core/services/services.module';
+import { UtilsModule } from 'src/@core/utils/utils.module';
 
 @NgModule({
   declarations: [AppComponent],
   entryComponents: [],
-  imports: [BrowserModule, IonicModule.forRoot(), AppRoutingModule, ServiceModule],
+  imports: [BrowserModule, IonicModule.forRoot(), AppRoutingModule, ServiceModule, UtilsModule],
   providers: [
     StatusBar,
     SplashScreen,
@@ -22,4 +23,4 @@ import { ServiceModule } from '../@core/services/services.module';
   ],
   bootstrap: [AppComponent]
 })
-export class AppModule {}
+export class AppModule { }
