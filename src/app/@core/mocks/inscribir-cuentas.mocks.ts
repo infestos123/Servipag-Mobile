@@ -1,6 +1,7 @@
-import { IRequest } from '../models/request.models';
+import { AppRequest } from './../models/appmovilservipag.model';
 
-export const inscribirCuentas: IRequest = {
+
+export const inscribirCuentas: AppRequest = {
 
 
     body: {
@@ -40,5 +41,4 @@ export const inscribirCuentas: IRequest = {
         token: 'QdKYs5Q1/zY8dNZDt++cpy8ha4/Qwor8t7WXwbFhDek=',
         version_app: '0.0.4'
     }
-
-}
+};

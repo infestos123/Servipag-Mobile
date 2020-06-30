@@ -1,8 +1,7 @@
+import { AppRequest } from './../models/appmovilservipag.model';
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Observable } from 'rxjs';
-
-import { IRequest, IServicesRequest } from '../models/request.models';
 
 @Injectable({
   providedIn: 'root'
@@ -19,46 +18,46 @@ export class AppMovilServipagService {
 
   constructor(private http: HttpClient) { }
 
-  getRegistroClientes(body: IRequest): Observable<any> {
+  getRegistroClientes(body: AppRequest): Observable<any> {
     return this.http.post(this.baseUrl, body);
   }
-  getExisteCliente(body: IRequest): Observable<any> {
+  getExisteCliente(body: AppRequest): Observable<any> {
     return this.http.post(this.baseUrl, body);
   }
-  getListadoRegiones(body: IRequest): Observable<any> {
+  getListadoRegiones(body: AppRequest): Observable<any> {
     return this.http.post(this.baseUrl, body);
   }
-  getObtieneComunas(body: IRequest): Observable<any> {
+  getObtieneComunas(body: AppRequest): Observable<any> {
     return this.http.post(this.baseUrl, body);
   }
-  getInscribirCuentas(body: IRequest): Observable<any> {
+  getInscribirCuentas(body: AppRequest): Observable<any> {
     return this.http.post(this.baseUrl, body);
   }
-  getEmpresas(body: IRequest): Observable<any> {
+  getEmpresas(body: AppRequest): Observable<any> {
     return this.http.post(this.baseUrl, body);
   }
-  getServicios(body: IServicesRequest): Observable<any> {
+  getServicios(body: any): Observable<any> {
     return this.http.post(this.baseUrl, JSON.stringify(body), this.httpOptions);
   }
-  getModificaCuentasInscritas(body: IRequest): Observable<any> {
+  getModificaCuentasInscritas(body: AppRequest): Observable<any> {
     return this.http.post(this.baseUrl, body);
   }
-  getEliminarCuentasInscritas(body: IRequest): Observable<any> {
+  getEliminarCuentasInscritas(body: AppRequest): Observable<any> {
     return this.http.post(this.baseUrl, body);
   }
-  getModificarClave(body: IRequest): Observable<any> {
+  getModificarClave(body: AppRequest): Observable<any> {
     return this.http.post(this.baseUrl, body);
   }
-  getObtenerClave(body: IRequest): Observable<any> {
+  getObtenerClave(body: AppRequest): Observable<any> {
     return this.http.post(this.baseUrl, body);
   }
-  getPagarBoleta(body: IRequest): Observable<any> {
+  getPagarBoleta(body: AppRequest): Observable<any> {
     return this.http.post(this.baseUrl, body);
   }
-  getEstadoPago(body: IRequest): Observable<any> {
+  getEstadoPago(body: AppRequest): Observable<any> {
     return this.http.post(this.baseUrl, body);
   }
-  getObtieneComprobante(body: IRequest): Observable<any> {
+  getObtieneComprobante(body: AppRequest): Observable<any> {
     return this.http.post(this.baseUrl, body);
   }
 

@@ -1,6 +1,7 @@
-import { IServicesRequest } from '../models/request.models';
+import { AutorizarRequest } from './../models/autorizar.model';
 
-export const request: IServicesRequest = {
+
+export const request: AutorizarRequest = {
 
     body: {
         solicita_token: 'YkXtbYHNtAHF3ja0/113qLZhrya3ExxH4KrWUl1G4bkniWikoZnkq4xUOy4ffolHIHUAm/yekwrS4zb1uezdNQ=='
