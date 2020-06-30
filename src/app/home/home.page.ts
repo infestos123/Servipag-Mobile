@@ -2,9 +2,9 @@ import { Component, OnInit } from '@angular/core';
 import { MenuController } from '@ionic/angular';
 import { Router } from '@angular/router';
 
-import { AppMovilServipagService } from '../../@core/services/app-movil-servipag.service';
-import { RegistroFirmaService } from '../../@core/utils/registro-firma.service';
-import { request } from '../../@core/mocks/requestService.mock';
+import { AppMovilServipagService } from '../@core/services/app-movil-servipag.service';
+import { RegistroFirmaService } from '../@core/utils/registro-firma.service';
+import { request } from '../@core/mocks/requestService.mock';
 
 
 @Component({

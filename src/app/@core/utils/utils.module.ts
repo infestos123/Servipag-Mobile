@@ -3,7 +3,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 import { AES256 } from '@ionic-native/aes-256/ngx';
-import { RegistroFirmaService } from '../utils/registro-firma.service';
+import { RegistroFirmaService } from './registro-firma.service';
 import { TokenService } from './token.service';
 
 
