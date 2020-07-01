@@ -7,6 +7,8 @@ import { IonicModule } from '@ionic/angular';
 import { AutopistasPageRoutingModule } from './autopistas-routing.module';
 
 import { AutopistasPage } from './autopistas.page';
+import { HeaderComponent } from './../../components/header/header.component';
+
 
 @NgModule({
   imports: [
@@ -15,6 +17,6 @@ import { AutopistasPage } from './autopistas.page';
     IonicModule,
     AutopistasPageRoutingModule
   ],
-  declarations: [AutopistasPage]
+  declarations: [AutopistasPage, HeaderComponent]
 })
-export class AutopistasPageModule {}
+export class AutopistasPageModule { }

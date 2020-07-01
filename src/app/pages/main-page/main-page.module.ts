@@ -7,6 +7,8 @@ import { IonicModule } from '@ionic/angular';
 import { MainPagePageRoutingModule } from './main-page-routing.module';
 
 import { MainPagePage } from './main-page.page';
+import { HeaderComponent } from './../../components/header/header.component';
+
 
 @NgModule({
   imports: [
@@ -15,6 +17,6 @@ import { MainPagePage } from './main-page.page';
     IonicModule,
     MainPagePageRoutingModule
   ],
-  declarations: [MainPagePage]
+  declarations: [MainPagePage, HeaderComponent]
 })
 export class MainPagePageModule {}

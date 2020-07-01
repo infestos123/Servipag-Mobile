@@ -1,4 +1,4 @@
-import { AdapterApiService } from './../@core/utils/adapter-api.service';
+import { AdapterApiService } from '../@core/utils/adapter-api.service';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
