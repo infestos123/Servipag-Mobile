@@ -14,7 +14,7 @@ export class MainPagePage implements OnInit {
   }
 
   returnToLogin() {
-    this.router.navigate(['/home']);
+    this.router.navigate(['/login']);
   }
 
 }

@@ -53,44 +53,59 @@
   font-weight: 500;
 }
 
+.labelRecuperarRight {
+  font-size: small;
+  float: right;
+  padding: 1rem;
+  color: #11c1e0;
+}
+
+.input-formulario {
+  border: 1px solid lightgray;
+  border-radius: 5px;
+  font-size: 1rem;
+  margin: 1.5rem 0 1.5rem 0;
+  background-color: white;
+  font-weight: 500;
+  --padding-start: 1rem;
+  --placeholder-color: #11c1e0;
+  --color: #11c1e0;
+}
+
+.label-link {
+  // color: white;
+  text-decoration: underline;
+}
+
+.main-content {
+  margin-top: 9rem;
+}
+
+.colorTittle {
+  margin-left: 0.5rem;
+  font-size:small;
+  vertical-align: 50%;
+  color: #11c1e0;
+}
+
 .label-titulo1 {
   text-align: center;
   margin-top: 2rem;
-  color: #3880ff;
+  color: #11c1e0;
   font-weight: 500;
   font-size: smaller;
 }
 .label-titulo2 {
   text-align: center;
-  margin: 2rem 0 1rem 0;
+  margin: 1.5rem 0 0 0;
   color: #777a80;
   font-weight: 500;
   font-size: smaller;
 }
 
-.labelRecuperarRight {
-  font-size: small;
-  float: right;
-  padding: 1rem;
-}
-.labelRecuperarRight2 {
-  font-size: small;
-  float: right;
-  padding: 1rem;
-  margin-top: 2rem;
-}
-
-.input-formulario {
-  border: 1px solid lightgray;
-  border-radius: 1rem;
-  font-size: 1rem;
-  margin: 1.5rem 0 1.5rem 0;
-
-  --padding-start: 1rem;
-  --placeholder-color: blue;
-}
-
-.label-link {
-  color: blue;
-  text-decoration: underline;
+.iconPosition {
+  position: absolute;
+  margin-left: 21.5rem;
+  margin-top: 12rem;
+  color: #11c1e0;
 }

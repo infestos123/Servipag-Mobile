@@ -2,15 +2,16 @@ import { Component, OnInit } from '@angular/core';
 import { MenuController } from '@ionic/angular';
 import { Router } from '@angular/router';
 
-import { AppMovilServipagService } from '../@core/services/app-movil-servipag.service';
-import { request } from '../@core/mocks/requestService.mock';
+import { AppMovilServipagService } from '../../@core/services/app-movil-servipag.service';
+import { request } from './../../@core/mocks/requestService.mock';
+
 
 @Component({
   selector: 'app-home',
-  templateUrl: 'home.page.html',
-  styleUrls: ['home.page.scss'],
+  templateUrl: 'login.page.html',
+  styleUrls: ['login.page.scss'],
 })
-export class HomePage implements OnInit {
+export class LoginPage implements OnInit {
 
   user: string;
   password: string;
@@ -68,5 +69,10 @@ export class HomePage implements OnInit {
 
   goApi(){
     this.router.navigate(['/api']);
+  }
+  
+  goToAutopistasPage(){
+    
+    this.router.navigate(['/autopistas']);
   }
 }
